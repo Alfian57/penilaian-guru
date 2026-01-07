@@ -33,7 +33,7 @@
                 </div>
                 <div class="flex justify-between items-center py-2 border-b border-gray-100">
                     <span class="text-gray-500">Tanggal Dibuat</span>
-                    <span class="font-medium">{{ $penugasan->created_at->format('d M Y H:i') }}</span>
+                    <span class="font-medium">{{ $penugasan->dibuat_pada?->format('d M Y H:i') ?? '-' }}</span>
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@
                     </div>
                     <div>
                         <div class="text-sm text-gray-500">Tanggal Penilaian</div>
-                        <div class="font-medium">{{ $penugasan->hasilPenilaian->tanggal_penilaian->format('d M Y H:i') }}</div>
+                        <div class="font-medium">{{ $penugasan->hasilPenilaian->tanggal_penilaian?->format('d M Y H:i') ?? '-' }}</div>
                     </div>
                 </div>
 
